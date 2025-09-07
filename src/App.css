@@ -1,0 +1,17 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff5f5;
+  color: #4a4a4a;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 40px 20px;
+  margin: 20px 0;
+}
