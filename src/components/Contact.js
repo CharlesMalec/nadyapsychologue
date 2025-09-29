@@ -9,7 +9,7 @@ function Contact() {
           <div className="w-full md:w-1/2 space-y-4">
             <h3 className="text-xl font-semibold">Coordonnées</h3>
             <p>
-              Nadya Houdeir, Psychologue<br />
+              Nadya Houdeir, Psychologue - Psychothérapeute<br />
               63, rue du Bois des Rêves<br />
               1341 Céroux - Mousry<br />
               Tel: 0478/08.31.29<br />
