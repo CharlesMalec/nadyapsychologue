@@ -32,6 +32,7 @@ function Contact() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                title="Map of the cabinet"
               ></iframe>
             </div>
           </div>
