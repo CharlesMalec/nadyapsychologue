@@ -4,6 +4,7 @@ import Header from './components/Header';
 import TopBanner from './components/TopBanner';
 import Accueil from './components/Accueil';
 import QuiSuisJe from './components/QuiSuisJe';
+import Event from './components/Event';
 import PourquoiConsulter from './components/PourquoiConsulter';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Accueil />} />
           <Route path="/qui-suis-je" element={<QuiSuisJe />} />
+          <Route path="/event" element={<Event />} />
           <Route path="/pourquoi-consulter" element={<PourquoiConsulter />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

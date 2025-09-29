@@ -14,6 +14,7 @@ function Header() {
           <ul className="flex space-x-6">
             <li><NavLink to="/" className="hover:text-[var(--accent-color)]">Accueil</NavLink></li>
             <li><NavLink to="/qui-suis-je" className="hover:text-[var(--accent-color)]">Qui suis-je ?</NavLink></li>
+            <li><NavLink to="/event" className="hover:text-[var(--accent-color)]">Événements</NavLink></li>
             <li><NavLink to="/pourquoi-consulter" className="hover:text-[var(--accent-color)]">Pourquoi consulter ?</NavLink></li>
             <li><NavLink to="/contact" className="hover:text-[var(--accent-color)]">Contact</NavLink></li>
           </ul>
