@@ -22,7 +22,7 @@ function App() {
           <Route path="/event" element={<Event />} />
           <Route path="/pourquoi-consulter" element={<PourquoiConsulter />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Home />} />        </Routes>
+          <Route path="*" element={<Accueil />} />        </Routes>
         <Footer />
       </div>
     </Router>
