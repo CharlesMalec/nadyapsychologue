@@ -6,12 +6,14 @@ function Contact() {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold mb-6 text-center">Contact</h2>
         <div className="flex flex-col md:flex-row gap-8">
+          
+          {/* Bloc coordonnées */}
           <div className="w-full md:w-1/2 space-y-4">
             <h3 className="text-xl font-semibold">Coordonnées</h3>
             <p>
               Nadya Houdeir, Psychologue - Psychothérapeute<br />
               63, rue du Bois des Rêves<br />
-              1341 Céroux - Mousry<br />
+              1341 Céroux - Mousty<br />
               Tel: 0478/08.31.29<br />
               Email:{" "}
               <a
@@ -37,13 +39,60 @@ function Contact() {
             </div>
           </div>
 
+          {/* Bloc formulaire Netlify */}
           <div className="w-full md:w-1/2 bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-4">Formulaire de contact</h3>
-            <form className="flex flex-col gap-4">
-              <input type="text" placeholder="Nom" className="p-2 border rounded" />
-              <input type="text" placeholder="Prénom" className="p-2 border rounded" />
-              <input type="tel" placeholder="Téléphone" className="p-2 border rounded" />
-              <input type="email" placeholder="Email" className="p-2 border rounded" />
+
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              className="flex flex-col gap-4"
+            >
+              {/* Champ caché pour Netlify */}
+              <input type="hidden" name="form-name" value="contact" />
+
+              {/* Champ piège anti-bot */}
+              <p className="hidden">
+                <label>
+                  Ne pas remplir ce champ : <input name="bot-field" />
+                </label>
+              </p>
+
+              <input
+                type="text"
+                name="nom"
+                placeholder="Nom"
+                className="p-2 border rounded"
+                required
+              />
+              <input
+                type="text"
+                name="prenom"
+                placeholder="Prénom"
+                className="p-2 border rounded"
+              />
+              <input
+                type="tel"
+                name="telephone"
+                placeholder="Téléphone"
+                className="p-2 border rounded"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                className="p-2 border rounded"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Votre message"
+                rows="5"
+                className="p-2 border rounded"
+              ></textarea>
+
               <button
                 type="submit"
                 className="bg-[var(--button-color)] text-[var(--citation-color)] py-2 rounded hover:bg-[#d3e0ea]"
