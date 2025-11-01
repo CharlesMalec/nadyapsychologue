@@ -8,6 +8,7 @@ import Event from './components/Event';
 import PourquoiConsulter from './components/PourquoiConsulter';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Merci from './components/Merci';
 import './App.css';
 
 function App() {
