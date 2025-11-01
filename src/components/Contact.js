@@ -1,12 +1,37 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-function Contact() {
+export default function Contact() {
+  const navigate = useNavigate();
+  const [sending, setSending] = React.useState(false);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setSending(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      // Poster vers "/" pour éviter un POST direct sur /contact (404 SPA)
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data).toString(),
+      });
+      navigate("/merci"); // route React
+    } catch (err) {
+      console.error(err);
+      alert("Échec d’envoi. Merci de réessayer.");
+    } finally {
+      setSending(false);
+    }
+  }
+
   return (
     <section className="py-12 px-4 bg-[var(--secondary-color)] shadow-md">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold mb-6 text-center">Contact</h2>
         <div className="flex flex-col md:flex-row gap-8">
-          
           {/* Bloc coordonnées */}
           <div className="w-full md:w-1/2 space-y-4">
             <h3 className="text-xl font-semibold">Coordonnées</h3>
@@ -48,6 +73,7 @@ function Contact() {
               method="POST"
               data-netlify="true"
               netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
               className="flex flex-col gap-4"
             >
               {/* Champ caché pour Netlify */}
@@ -95,9 +121,10 @@ function Contact() {
 
               <button
                 type="submit"
+                disabled={sending}
                 className="bg-[var(--button-color)] text-[var(--citation-color)] py-2 rounded hover:bg-[#d3e0ea]"
               >
-                Envoyer
+                {sending ? "Envoi..." : "Envoyer"}
               </button>
             </form>
           </div>
@@ -106,5 +133,3 @@ function Contact() {
     </section>
   );
 }
-
-export default Contact;
