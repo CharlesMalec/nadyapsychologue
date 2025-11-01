@@ -9,7 +9,7 @@ function PourquoiConsulter() {
           <div className="w-full md:w-2/3 space-y-4">
             <h3 className="text-xl font-semibold">Pour qui ?</h3>
             <p><strong>Public :</strong> Enfants/Adolescents/Adultes - En individuel ou Thérapie de couple</p>
-            <p>Je consulte en français et en anglais le mercredi soir (17h-21h) et le samedi matin (8h-12h). Dans un cadre bienveillant, j'accompagne les adultes, les adolescents et les enfants qui sont en difficulté ou en souffrance.</p>
+            <p>Je consulte en français et en anglais. Dans un cadre bienveillant, j'accompagne les adultes, les adolescents et les enfants qui sont en difficulté ou en souffrance.</p>
             <p>Je reçois en entretien individuel les adultes qui souhaiteraient de l'aide en cas de :</p>
             <ul className="list-disc pl-5 space-y-2">
               <li>rupture</li>
